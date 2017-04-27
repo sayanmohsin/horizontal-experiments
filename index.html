@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Experiment</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="box/css/main.css" />
+	<link rel="stylesheet" href="box/slicknav/slicknav.min.css">
+</head>
+<body>
+<header data-role="header" id="header">
+<!--    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#section-section1"><span>Section</span></a>
+            </li>
+            <li>
+                <a href="#section-section2"><span>Section</span></a>
+            </li>
+            <li>
+                <a href="#section-section3"><span>Section</span></a>
+            </li>
+            <li>
+                <a href="#section-section4"><span>Section</span></a>
+            </li>
+        </ul>
+    </nav>
+-->	
+	<nav class="menu-navigation-icons">
+    <a href="#section-section1" class="menu-magenta"><i class="fa fa-camera-retro"></i><span>Section 1</span></a>
+    <a href="#section-section2" class="menu-blue"><i class="fa fa-code"></i><span>Section 2</span></a>
+    <a href="#section-section3" class="menu-green"><i class="fa fa-comment"></i><span>Section 3</span></a>
+    <a href="#section-section4" class="menu-yellow"><i class="fa fa-plane"></i><span>Section 4</span></a>
+    <a href="#section-section5" class="menu-red"><i class="fa fa-heart"></i><span>Section 5</span></a>
+	</nav>
+
+</header>
+
+<div class="horizon-prev"><img src="box/images/l-arrow.png"></div>
+<div class="horizon-next"><img src="box/images/r-arrow.png"></div>
+
+<section data-role="section" id="section-section1"></section>
+<section data-role="section" id="section-section2"></section>
+<section data-role="section" id="section-section3"></section>
+<section data-role="section" id="section-section4">
+    <div class="go-to-2">Go to panel 2 via ID.</div>
+</section>
+
+<footer data-role="footer" id="footer"></footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="box/slicknav/jquery.slicknav.min.js"></script>
+<script type="text/javascript" src="box/js/jquery.touchSwipe.js"></script>
+<script type="text/javascript" src="box/js/jquery.horizonScroll.js"></script>
+<script src="box/js/start.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+	$(function(){
+    $('.menu-navigation-icons').slicknav();
+    });
+	
+    // By default, swipe is enabled.
+    $('section').horizon();
+
+    // If you do not want to include another plugin, TouchSwipe, you can set it to false in the default options by passing in the option as false.
+    //$('section').horizon({swipe: false});
+
+    $(document).on('click', '.go-to-2', function () {
+        $(document).horizon('scrollTo', 'section-section2');
+    });
+
+</script>
+
+</body>
+</html>

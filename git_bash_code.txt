@@ -1,0 +1,10 @@
+~~~~~~GIT BASH~~~~~
+1. git config --global user.name "sayanmohsin"
+2. git config --global user.email "sayanmohsin@outlook.com"
+3. git clone https://github.com/sayanmohsin/horizontal-experiments.git
+4. git add -A
+5. git status
+6. git commit -m "comment"
+7. git push
+~~~~~~~~~~~~~~~~~~~
+
